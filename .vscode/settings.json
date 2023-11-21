@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.cshtml": "html",
+        "vector": "c",
+        "xstring": "c",
+        "xutility": "c",
+        "cpconstraint.h": "c"
+    },
+    "dart.lineLength": 200,
+    "dart.analyzerSshHost": null,
+    "[dart]": {
+        "editor.rulers": [
+            200
+        ],
+    }
+    
+}
