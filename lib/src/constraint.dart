@@ -1,8 +1,8 @@
 // ignore_for_file: non_constant_identifier_names
 
-part of 'liquid.dart';
+part of 'liquid2d.dart';
 
-class Constraint extends Liquid {
+class Constraint extends liquid2d {
   late final ConstraintResource _constraint;
   Constraint._fromPointer(Pointer<cpConstraint> constraint) : _constraint = ConstraintResource(constraint);
   Pointer<cpConstraint> get _toPointer => _constraint.toPointer;

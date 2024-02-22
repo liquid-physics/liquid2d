@@ -35,7 +35,7 @@
 
 // // const String _libName = 'chipmunk';
 
-// // /// The dynamic library in which the symbols for [LiquidBindings] can be found.
+// // /// The dynamic library in which the symbols for [liquid2dBindings] can be found.
 // // final ffi.DynamicLibrary _dylib = () {
 // //   if (Platform.isMacOS || Platform.isIOS) {
 // //     return ffi.DynamicLibrary.open('$_libName.framework/$_libName');

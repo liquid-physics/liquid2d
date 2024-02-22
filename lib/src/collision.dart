@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, unused_element
 
-part of 'liquid.dart';
+part of 'liquid2d.dart';
 
 /// Struct that holds function callback pointers to configure custom collision handling.
 /// Collision handlers have a pair of types; when a collision occurs between two shapes that have these types, the collision handler functions are triggered.

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="liquid_example"
+        android:label="liquid2d_example"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

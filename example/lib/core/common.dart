@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:liquid_example/core/routes.dart';
+import 'package:liquid2d_example/core/routes.dart';
 
 AppBar appBar(BuildContext context) => AppBar(
       title: Text(routes.entries.elementAt(index % routes.length).value.$2),

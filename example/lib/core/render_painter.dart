@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:liquid_example/core/game.dart';
-import 'package:liquid_example/core/paint_shape.dart';
+import 'package:liquid2d_example/core/game.dart';
+import 'package:liquid2d_example/core/paint_shape.dart';
 
 class RenderPainter extends CustomPainter {
   final List<PaintShape> shapes;

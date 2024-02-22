@@ -1,8 +1,8 @@
 // ignore_for_file: non_constant_identifier_names
 
-part of 'liquid.dart';
+part of 'liquid2d.dart';
 
-class Body extends Liquid {
+class Body extends liquid2d {
   late final BodyResources _body;
   Body({required double mass, required double moment}) : _body = BodyResources(bindings.cpBodyNew(mass, moment));
   Body._fromPointer(Pointer<cpBody> body) : _body = BodyResources(body);

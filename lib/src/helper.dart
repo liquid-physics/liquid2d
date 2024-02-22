@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, unused_element
 
-part of 'liquid.dart';
+part of 'liquid2d.dart';
 
 extension CpTransformPoint on Matrix4 {
   Vector2 toTransformPoint(Vector2 p) {

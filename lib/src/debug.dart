@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
-part of 'liquid.dart';
+part of 'liquid2d.dart';
 
 enum DebugDrawFlag {
   drawShape(1 << 0),

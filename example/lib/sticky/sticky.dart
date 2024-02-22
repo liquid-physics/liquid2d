@@ -2,13 +2,13 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:liquid/liquid.dart' as lq;
-import 'package:liquid_example/core/common.dart';
-import 'package:liquid_example/core/fps_counter.dart';
-import 'package:liquid_example/core/game.dart';
-import 'package:liquid_example/core/inputw.dart';
-import 'package:liquid_example/core/paint_shape.dart';
-import 'package:liquid_example/core/render_painter.dart';
+import 'package:liquid2d/liquid2d.dart' as lq;
+import 'package:liquid2d_example/core/common.dart';
+import 'package:liquid2d_example/core/fps_counter.dart';
+import 'package:liquid2d_example/core/game.dart';
+import 'package:liquid2d_example/core/inputw.dart';
+import 'package:liquid2d_example/core/paint_shape.dart';
+import 'package:liquid2d_example/core/render_painter.dart';
 import 'package:vector_math/vector_math_64.dart' as mt;
 
 class Sticky extends StatefulWidget {
@@ -150,8 +150,8 @@ class _StickyDrawState extends State<StickyDraw> {
           var joint = lq.PivotJoint(a: bodyA, b: bodyB, anchorA: anchorA, anchorB: anchorB)..setMaxForce(3e3);
 
           //Schedule a post-step() callback to add the joint.
-          space.addPostStepCallback<lq.Constraint>(joint, (space, liquidType) {
-            space.addConstraint(constraint: liquidType);
+          space.addPostStepCallback<lq.Constraint>(joint, (space, liquid2dType) {
+            space.addConstraint(constraint: liquid2dType);
           });
 
           arbiter.setData<lq.Constraint>(joint);
@@ -180,8 +180,8 @@ class _StickyDrawState extends State<StickyDraw> {
           joint.setMaxForce(0);
 
           // Perform the removal in a post-step() callback.
-          space.addPostStepCallback<lq.Constraint>(joint, (space, liquidType) {
-            space.removeConstraint(constraint: liquidType);
+          space.addPostStepCallback<lq.Constraint>(joint, (space, liquid2dType) {
+            space.removeConstraint(constraint: liquid2dType);
           });
           arbiter.removeData();
         }

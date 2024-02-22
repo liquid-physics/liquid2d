@@ -1,5 +1,5 @@
-import 'package:liquid/liquid.dart';
-import 'package:liquid/src/liquid.dart';
+import 'package:liquid2d/liquid2d.dart';
+import 'package:liquid2d/src/liquid2d.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 void main(List<String> arguments) {

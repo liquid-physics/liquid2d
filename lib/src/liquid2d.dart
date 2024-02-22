@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, unused_element
 
-library liquid;
+library liquid2d;
 
 import 'dart:collection';
 import 'dart:ffi';
@@ -26,7 +26,7 @@ part 'debug.dart';
 
 const String _libName = 'chipmunk';
 
-/// The dynamic library in which the symbols for [LiquidBindings] can be found.
+/// The dynamic library in which the symbols for [liquid2dBindings] can be found.
 final DynamicLibrary _dylib = () {
   if (Platform.isMacOS || Platform.isIOS) {
     return DynamicLibrary.open('$_libName.framework/$_libName');
@@ -44,9 +44,9 @@ final DynamicLibrary _dylib = () {
 final Chipmunks bindings = Chipmunks(_dylib);
 var uuid = const Uuid();
 
-abstract class Liquid {
-  Liquid();
-  // Liquid _fromPointerCast(
+abstract class liquid2d {
+  liquid2d();
+  // liquid2d _fromPointerCast(
   //   Pointer<Void> p,
   // ) {
   //   if (T is Space) {

@@ -1,6 +1,6 @@
-# Liquid
+# liquid2d
 
-Liquid is bindings for the Chipmunk 2D physics library.
+liquid2d is bindings for the Chipmunk 2D physics library.
 
 ## Installation
 
@@ -9,8 +9,8 @@ Liquid is bindings for the Chipmunk 2D physics library.
 2. add dependency pubspec.yaml
 
 dependencies:
-  liquid:
-    path: ../../liquid
+  liquid2d:
+    path: ../../liquid2d
 ```
 
 ## Demo Project

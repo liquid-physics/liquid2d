@@ -6,9 +6,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:liquid_example/core/input_event.dart';
-import 'package:liquid_example/core/space_matrix.dart';
-import 'package:liquid/liquid.dart' as lq;
+import 'package:liquid2d_example/core/input_event.dart';
+import 'package:liquid2d_example/core/space_matrix.dart';
+import 'package:liquid2d/liquid2d.dart' as lq;
 import 'package:vector_math/vector_math_64.dart' as mt;
 
 const int grabbableMaskBit = 1 << 31;

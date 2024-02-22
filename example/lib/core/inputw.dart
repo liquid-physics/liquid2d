@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:liquid_example/core/game.dart';
-import 'package:liquid/liquid.dart' as lq;
+import 'package:liquid2d_example/core/game.dart';
+import 'package:liquid2d/liquid2d.dart' as lq;
 import 'package:vector_math/vector_math_64.dart' as mt;
 
 class InputW extends StatefulWidget {

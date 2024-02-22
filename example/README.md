@@ -1,6 +1,6 @@
-# liquid_example
+# liquid2d_example
 
-Demonstrates how to use the liquid plugin.
+Demonstrates how to use the liquid2d plugin.
 
 ## Getting Started
 

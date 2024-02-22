@@ -1,13 +1,13 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:liquid/liquid.dart' as lq;
-import 'package:liquid_example/core/common.dart';
-import 'package:liquid_example/core/fps_counter.dart';
-import 'package:liquid_example/core/game.dart';
-import 'package:liquid_example/core/inputw.dart';
-import 'package:liquid_example/core/paint_shape.dart';
-import 'package:liquid_example/core/render_painter.dart';
+import 'package:liquid2d/liquid2d.dart' as lq;
+import 'package:liquid2d_example/core/common.dart';
+import 'package:liquid2d_example/core/fps_counter.dart';
+import 'package:liquid2d_example/core/game.dart';
+import 'package:liquid2d_example/core/inputw.dart';
+import 'package:liquid2d_example/core/paint_shape.dart';
+import 'package:liquid2d_example/core/render_painter.dart';
 import 'package:vector_math/vector_math_64.dart' as mt;
 
 class Crane extends StatefulWidget {
@@ -122,7 +122,7 @@ class _CraneDrawState extends State<CraneDraw> {
       if (hookJoint == null) {
         var (lq.Body a, lq.Body b) = arbiter.getBodies();
 
-        widget.game.space.addPostStepCallback<lq.Space>(space, (space, liquidType) {
+        widget.game.space.addPostStepCallback<lq.Space>(space, (space, liquid2dType) {
           hookJoint = space.addConstraint(constraint: lq.PivotJoint(a: a, b: b, anchorA: a.worldToLocal(a.getPosition()), anchorB: b.worldToLocal(a.getPosition())));
         });
       }

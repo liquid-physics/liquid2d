@@ -1,8 +1,8 @@
 // ignore_for_file: constant_identifier_names, unused_element, non_constant_identifier_names
 
-part of 'liquid.dart';
+part of 'liquid2d.dart';
 
-class Shape extends Liquid {
+class Shape extends liquid2d {
   late final ShapeResources _shape;
   Shape._fromPointerPointer(Pointer<Pointer<cpShape>> shape) : _shape = ShapeResources(shape.value);
   Shape._fromPointer(Pointer<cpShape> shape) : _shape = ShapeResources(shape);

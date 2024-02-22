@@ -1,8 +1,8 @@
 // ignore_for_file: non_constant_identifier_names
 
-part of 'liquid.dart';
+part of 'liquid2d.dart';
 
-class Space extends Liquid {
+class Space extends liquid2d {
   late final SpaceResource _space;
   Space() : _space = SpaceResource(bindings.cpSpaceNew());
   Space._fromPointer(Pointer<cpSpace> space) : _space = SpaceResource(space);
@@ -109,7 +109,7 @@ class Space extends Liquid {
   /// You can only register one callback per unique value for @c key.
   /// Returns true only if @c key has never been scheduled before.
   /// It's possible to pass @c NULL for @c func if you only want to mark @c key as being used.
-  bool addPostStepCallback<T>(T liquidType, void Function(Space space, T liquidType) postStepFunc) => _space.addPostStepCallback<T>(liquidType, postStepFunc);
+  bool addPostStepCallback<T>(T liquid2dType, void Function(Space space, T liquid2dType) postStepFunc) => _space.addPostStepCallback<T>(liquid2dType, postStepFunc);
 
   /// Perform a directed line segment query (like a raycast) against the space calling @c func for each shape intersected.
   void segmentQuery(
@@ -387,26 +387,26 @@ class SpaceResource {
     return CollisionHandler._fromPointerSpaceAddCollisionHandler(_space, aType, bType);
   }
 
-  bool addPostStepCallback<T>(T liquidType, void Function(Space space, T liquidType) postStepFunc) {
-    if (liquidType is Constraint) {
+  bool addPostStepCallback<T>(T liquid2dType, void Function(Space space, T liquid2dType) postStepFunc) {
+    if (liquid2dType is Constraint) {
       var cId = __calbackIdGen(_space.address, 'addPostStepCallbackConstraint');
-      _addPostStepCallback_callbacks_constraint[cId] = postStepFunc as void Function(Space space, Constraint liquidType);
-      return bindings.cpSpaceAddPostStepCallback(_space, Pointer.fromFunction(_s_addPostStepCallback), (liquidType)._toPointer.cast<Void>(), nullptr, cId) == 1 ? true : false;
+      _addPostStepCallback_callbacks_constraint[cId] = postStepFunc as void Function(Space space, Constraint liquid2dType);
+      return bindings.cpSpaceAddPostStepCallback(_space, Pointer.fromFunction(_s_addPostStepCallback), (liquid2dType)._toPointer.cast<Void>(), nullptr, cId) == 1 ? true : false;
     }
-    if (liquidType is Body) {
+    if (liquid2dType is Body) {
       var cId = __calbackIdGen(_space.address, 'addPostStepCallbackBody');
-      _addPostStepCallback_callbacks_body[cId] = postStepFunc as void Function(Space space, Body liquidType);
-      return bindings.cpSpaceAddPostStepCallback(_space, Pointer.fromFunction(_s_addPostStepCallback), (liquidType)._toPointer.cast<Void>(), nullptr, cId) == 1 ? true : false;
+      _addPostStepCallback_callbacks_body[cId] = postStepFunc as void Function(Space space, Body liquid2dType);
+      return bindings.cpSpaceAddPostStepCallback(_space, Pointer.fromFunction(_s_addPostStepCallback), (liquid2dType)._toPointer.cast<Void>(), nullptr, cId) == 1 ? true : false;
     }
-    if (liquidType is Space) {
+    if (liquid2dType is Space) {
       var cId = __calbackIdGen(_space.address, 'addPostStepCallbackSpace');
-      _addPostStepCallback_callbacks_space[cId] = postStepFunc as void Function(Space space, Space liquidType);
-      return bindings.cpSpaceAddPostStepCallback(_space, Pointer.fromFunction(_s_addPostStepCallback), (liquidType)._toPointer.cast<Void>(), nullptr, cId) == 1 ? true : false;
+      _addPostStepCallback_callbacks_space[cId] = postStepFunc as void Function(Space space, Space liquid2dType);
+      return bindings.cpSpaceAddPostStepCallback(_space, Pointer.fromFunction(_s_addPostStepCallback), (liquid2dType)._toPointer.cast<Void>(), nullptr, cId) == 1 ? true : false;
     }
-    if (liquidType is Shape) {
+    if (liquid2dType is Shape) {
       var cId = __calbackIdGen(_space.address, 'addPostStepCallbackShape');
-      _addPostStepCallback_callbacks_shape[cId] = postStepFunc as void Function(Space space, Shape liquidType);
-      return bindings.cpSpaceAddPostStepCallback(_space, Pointer.fromFunction(_s_addPostStepCallback), (liquidType)._toPointer.cast<Void>(), nullptr, cId) == 1 ? true : false;
+      _addPostStepCallback_callbacks_shape[cId] = postStepFunc as void Function(Space space, Shape liquid2dType);
+      return bindings.cpSpaceAddPostStepCallback(_space, Pointer.fromFunction(_s_addPostStepCallback), (liquid2dType)._toPointer.cast<Void>(), nullptr, cId) == 1 ? true : false;
     }
     throw 'error';
   }
