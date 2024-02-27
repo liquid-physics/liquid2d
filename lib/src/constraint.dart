@@ -2,7 +2,7 @@
 
 part of 'liquid2d.dart';
 
-class Constraint extends liquid2d {
+class Constraint extends Liquid2d {
   late final ConstraintResource _constraint;
   Constraint._fromPointer(Pointer<cpConstraint> constraint) : _constraint = ConstraintResource(constraint);
   Pointer<cpConstraint> get _toPointer => _constraint.toPointer;

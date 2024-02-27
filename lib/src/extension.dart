@@ -145,8 +145,8 @@ class CpVectArray {
   final Pointer<cpVect> _cpVect;
   CpVectArray(List<Vector2> arr) : _cpVect = calloc.allocate<cpVect>(sizeOf<cpVect>() * arr.length) {
     for (var i = 0; i < arr.length; i++) {
-      _cpVect.elementAt(i).ref.x = arr[i].x;
-      _cpVect.elementAt(i).ref.y = arr[i].y;
+      (_cpVect + i).ref.x = arr[i].x;
+      (_cpVect + i).ref.y = arr[i].y;
     }
     _finalizer.attach(this, _cpVect, detach: this);
   }
@@ -171,7 +171,7 @@ class CpVectArrayRef {
   ffi.Pointer<cpVect> get toPointer => _arr;
   List<Vector2> get array {
     for (var i = 0; i < count; i++) {
-      _array[i] = (Vector2(_arr.elementAt(i).ref.x, _arr.elementAt(i).ref.y));
+      _array[i] = (Vector2((_arr + i).ref.x, (_arr + i).ref.y));
     }
     return _array;
   }

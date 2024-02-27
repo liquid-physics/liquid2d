@@ -2,7 +2,7 @@
 
 part of 'liquid2d.dart';
 
-class Shape extends liquid2d {
+class Shape extends Liquid2d {
   late final ShapeResources _shape;
   Shape._fromPointerPointer(Pointer<Pointer<cpShape>> shape) : _shape = ShapeResources(shape.value);
   Shape._fromPointer(Pointer<cpShape> shape) : _shape = ShapeResources(shape);
@@ -369,7 +369,7 @@ class BoxShape extends PolyShape {
   double get r => _polyShape.ref.r;
   Pointer<cpSplittingPlane> get _planes => _polyShape.ref.planes;
 
-  List<Vector2> get verts => [for (int i = 0; i < count; i++) _planes.elementAt(count).ref.v0.toVector2()];
+  List<Vector2> get verts => [for (int i = 0; i < count; i++) (_planes + count).ref.v0.toVector2()];
 }
 
 class CircleShape extends Shape {

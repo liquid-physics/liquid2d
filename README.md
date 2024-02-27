@@ -5,12 +5,7 @@ liquid2d is bindings for the Chipmunk 2D physics library.
 ## Installation
 
 ```
-1. clone this package onto your project
-2. add dependency pubspec.yaml
-
-dependencies:
-  liquid2d:
-    path: ../../liquid2d
+flutter pub add liquid2d
 ```
 
 ## Demo Project

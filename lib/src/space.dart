@@ -2,7 +2,7 @@
 
 part of 'liquid2d.dart';
 
-class Space extends liquid2d {
+class Space extends Liquid2d {
   late final SpaceResource _space;
   Space() : _space = SpaceResource(bindings.cpSpaceNew());
   Space._fromPointer(Pointer<cpSpace> space) : _space = SpaceResource(space);

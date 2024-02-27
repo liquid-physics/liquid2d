@@ -44,21 +44,6 @@ final DynamicLibrary _dylib = () {
 final Chipmunks bindings = Chipmunks(_dylib);
 var uuid = const Uuid();
 
-abstract class liquid2d {
-  liquid2d();
-  // liquid2d _fromPointerCast(
-  //   Pointer<Void> p,
-  // ) {
-  //   if (T is Space) {
-  //     return Space._fromPointer(p.cast<cpSpace>());
-  //   } else if (T is Shape) {
-  //     return Shape._fromPointer(p.cast<cpShape>());
-  //   } else if (T is Constraint) {
-  //     return Constraint._fromPointer(p.cast<cpConstraint>());
-  //   } else if (T is Body) {
-  //     return Body._fromPointer(p.cast<cpBody>());
-  //   } else {
-  //     throw 'error type';
-  //   }
-  // }
+abstract class Liquid2d {
+  Liquid2d();
 }
