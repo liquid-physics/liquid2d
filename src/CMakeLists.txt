@@ -56,7 +56,7 @@ if(NOT MSVC)
   if(FORCE_CLANG_BLOCKS)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fblocks")
   endif()
-  set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -ffast-math") # extend release-profile with fast-math
+  set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -ffast-math -fno-finite-math-only") # extend release-profile with fast-math
   set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -Wall") # extend debug-profile with -Wall
 endif()
 
