@@ -1,6 +1,6 @@
 name: liquid2d
 description: Dart/Flutter binding for Chipmunk2D physics engine. This uses Chipmunk2D version 7.0.3.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/liquid-physics/liquid2d
 
 environment:
